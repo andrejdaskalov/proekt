@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>The view of the North</title>
+</head>
+<body>
+  <div class="background">
+
+  </div>
+  <div class="row">
+    <div class="col-12 header">
+      <h1>The view of the North</h1>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-4 spacer"></div>
+    <div class="col-4 pill-nav">
+      <ul class="menu">
+        <li><a class="active" href="index.html" class="active">Home</a></li>
+        <li><a href="#">Categories</a>
+          <ul class="submenu">
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+
+      </ul>
+    </div>
+    <div class="col-4 spacer"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8 post">
+      <p>A title for a smack-ass post</p>
+      <p class="content"><hr>Macedonia; Macedonian: Македонија,  officially the Republic of Macedonia (Macedonian: Република Македонија, translit. Republika Makedonija [rɛˈpublika ˌmakɛˈdɔnija] (About this sound listen)), is a country in the Balkan peninsula in Southeast Europe. It is one of the successor states of the former Yugoslavia, from which it declared independence in 1991. It became a member of the United Nations in 1993, but, as a result of an ongoing dispute with Greece over the use of the name "Macedonia", was admitted under the provisional description the former Yugoslav Republic of Macedonia[9][10] (sometimes abbreviated as FYROM and FYR Macedonia), a term that is also used by international organizations such as the European Union,[11] the Council of Europe,[12] and NATO.[13] On 17 June 2018, Macedonia and Greece signed the Prespa agreement which would see the country change its name to “Republic of North Macedonia”, pending a national referendum on the matter and legislation passing through parliament.[14][15]
+
+</p>
+    </div>
+    <div class="col-2">
+
+    </div>
+
+  </div>
+  <button  id="myBtn" title="Go to top">Top</button>
+  <script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+</script>
+<script>// When the user clicks on the button, scroll to the top of the document
+$('#myBtn').click(function(){
+  $('body,html').animate({
+    scrollTop: 0
+  }, 2000);
+});
+
+</script>
+
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+</html>

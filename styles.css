@@ -1,0 +1,158 @@
+html{
+  height: 100%;
+  background-image: linear-gradient(to right top, #001548, #003c74, #00679c, #0093be, #00c1da, #35d5e7, #53eaf3, #6efeff, #9efcff, #cefaff, #f0faff, #ffffff);
+  background-repeat: no-repeat;
+  font-family: Roboto;
+}
+.background{
+  background-image: linear-gradient(to right top, #001548, #003c74, #00679c, #0093be, #00c1da, #35d5e7, #53eaf3, #6efeff, #9efcff, #cefaff, #f0faff, #ffffff);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+* {
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width:100%;
+
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.post {
+  background-color:rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 6px;
+
+}
+.post p{
+  margin-top: 1px;
+  text-align: center;
+  font-size: 30px;
+  /*line-height:100px;*/
+}
+.post .content{
+  line-height:100px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0066cc;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 60px;
+}
+/*-------------------------*/
+.pill-nav ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.pill-nav li{
+  width: 15px;
+  height: 25px;
+
+}
+
+.pill-nav a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: white;
+}
+
+.pill-nav a:hover {
+  background-color:#555555;
+  color: white;
+
+}
+
+.pill-nav a.active {
+  background-color: #0066cc;
+  color: white;
+}
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.menu ul{
+  opacity: 0;
+   transition: all .5s ease;
+}
+.menu li:hover ul {
+
+  opacity: 1;
+  transform: translateY(0);
+}
+.pill-nav li{
+  flex: 1;
+
+}
+.submenu{
+  padding: 0;
+}
+.submenu li a{
+  display: inline-block;
+  color: black;
+  text-align: center;
+
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 50px;
+  background-color: white;
+
+}
+.submenu li{
+
+  margin-bottom:27px;
+}
+.submenu li:first-child{
+  margin-top: 17px;
+}
